@@ -1,0 +1,11 @@
+.vscode
+__pycache__
+/build
+/dist
+*.egg-info
+*.mp4
+
+.idea/*
+venv/*
+pyvenv.cfg
+.pytest_cache
