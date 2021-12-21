@@ -34,7 +34,7 @@ class FaceDetector(ObjectDetectionPerceptor):
         This function is used to run the face detection.
 
         Arguments:
-            input_data (Any): RGB array of the face.
+            input_data (Any): RGB array of the image.
             config (ConfigRegistry): The configuration.
 
         Returns:
