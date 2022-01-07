@@ -15,10 +15,10 @@ sdfsdf
 ## What you need
 
 Edge compute board with Google Coral TPU
-- Raspberry Pi with Coral USB
-- Google Coral Dev Kit
-- Google Coral Dev Kit Mini
-- ASUS Tinker T
+- Raspberry Pi with Coral USB [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) [Google Coral USB](https://coral.ai/products/accelerator/)
+- [Google Coral Dev Board](https://coral.ai/products/dev-board/)
+- [Google Coral Dev Board Mini](https://coral.ai/products/dev-board-mini/)
+- [ASUS Tinker T](https://www.asus.com/us/Networking-IoT-Servers/AIoT-Industrial-Solutions/Tinker-Board-Series/Tinker-Edge-T/)
 
 ## Getting started
 
@@ -40,7 +40,14 @@ sdfds
 ## Resources
 
 ### Getting help
-### Python packages for Darcy AI
-### Edgeworx Cloud
-### Other helpful links
 
+### Python packages for Darcy AI
+- [Darcy AI Engine](https://pypi.org/project/darcyai-engine/)
+- [Darcy AI Coral](https://pypi.org/project/darcyai-coral/)
+
+### Edgeworx Cloud
+[Edgeworx Cloud](https://cloud.edgeworx.io)
+
+### Other helpful links
+- [Edgeworx website](https://edgeworx.io)
+- [TensorFlow AI](https://www.tensorflow.org)
