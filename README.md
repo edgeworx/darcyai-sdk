@@ -1,18 +1,29 @@
 # Darcy AI SDK
 
-sdfsdf
+This is the official software development kit (SDK) for building on the Darcy AI platform
 
 ## Introducing the Darcy AI platform
 
-sdfsdf
+What this is
+Why it exists
+What you get
 
 ## How to use this SDK
 
 sdfsdf
 
+## What you need
+
+Edge compute board with Google Coral TPU
+- Raspberry Pi with Coral USB
+- Google Coral Dev Kit
+- Google Coral Dev Kit Mini
+- ASUS Tinker T
+
 ## Getting started
 
-sdfdsf
+Understanding Darcy terminology
+Try the Darcy AI Explorer demo application
 
 ## Building
 
