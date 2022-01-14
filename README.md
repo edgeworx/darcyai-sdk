@@ -10,7 +10,9 @@ What you get
 
 ## How to use this SDK
 
-sdfsdf
+The [docs](./docs) folder contains the full Darcy AI programming interface documentation and other helpful guide documents. Use this folder to learn about the Darcy AI platform and to get started. The guide documents will take you from an absolute beginner to building and deploying your own Darcy AI applications.
+
+The [examples](./examples) folder contains a diverse set of sample applications that you can use as a reference or as a start of your own Darcy AI application. The code is commented to help you understand what to do and when to do it. The Darcy AI Explorer demo application is a rich and complex example that leverages nearly all of the programming interfaces that Darcy offers.
 
 ## What you need
 
