@@ -44,7 +44,7 @@ Try the Darcy AI Explorer demo application
 
 ## Building
 
-sdfsdf
+Learn how to package your Darcy AI application into a container that includes all of the dependencies needed to run with the [Build Guide](./docs/BUILD.md)
 
 ## Deploying
 
