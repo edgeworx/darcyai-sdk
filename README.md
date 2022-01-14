@@ -49,5 +49,5 @@ sdfds
 Deploy and manage edge applications including Darcy AI applications with the Edgeworx Cloud. Create an account for free at [https://cloud.edgeworx.io](https://cloud.edgeworx.io)
 
 ### Other helpful links
-- [Edgeworx website](https://edgeworx.io)
-- [TensorFlow AI](https://www.tensorflow.org)
+- Company website for Edgeworx, the providers of the Darcy AI platform [https://edgeworx.io](https://edgeworx.io)
+- Official website for the Tensorflow AI project [https://www.tensorflow.org](https://www.tensorflow.org)
