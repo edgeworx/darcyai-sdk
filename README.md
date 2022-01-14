@@ -41,6 +41,9 @@ sdfds
 
 ### Getting help
 
+- Get help from the other Darcy AI developers, the Darcy team, and the whole Darcy community on the Darcy AI Forum at [https://discuss.edgeworx.io/c/darcy-ai/](https://discuss.edgeworx.io/c/darcy-ai/)
+- Report and track bugs in the Darcy AI platform and SDK using Github issues [https://github.com/edgeworx/darcyai-sdk/issues](https://github.com/edgeworx/darcyai-sdk/issues)
+
 ### Python packages for Darcy AI
 - Darcy AI Engine package [https://pypi.org/project/darcyai-engine/](https://pypi.org/project/darcyai-engine/)
 - Darcy AI Coral Accelerator extension package [https://pypi.org/project/darcyai-coral/](https://pypi.org/project/darcyai-coral/)
