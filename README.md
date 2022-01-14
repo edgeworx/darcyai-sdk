@@ -42,8 +42,8 @@ sdfds
 ### Getting help
 
 ### Python packages for Darcy AI
-- Darcy AI Engine package hosted at PyPi [https://pypi.org/project/darcyai-engine/](https://pypi.org/project/darcyai-engine/)
-- Darcy AI Coral Accelerator extension package hosted at PyPi [https://pypi.org/project/darcyai-coral/](https://pypi.org/project/darcyai-coral/)
+- Darcy AI Engine package [https://pypi.org/project/darcyai-engine/](https://pypi.org/project/darcyai-engine/)
+- Darcy AI Coral Accelerator extension package [https://pypi.org/project/darcyai-coral/](https://pypi.org/project/darcyai-coral/)
 
 ### Edgeworx Cloud
 Deploy and manage edge applications including Darcy AI applications with the Edgeworx Cloud. Create an account for free at [https://cloud.edgeworx.io](https://cloud.edgeworx.io)
