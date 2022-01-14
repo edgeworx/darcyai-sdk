@@ -46,7 +46,7 @@ sdfds
 - [Darcy AI Coral](https://pypi.org/project/darcyai-coral/)
 
 ### Edgeworx Cloud
-[Edgeworx Cloud](https://cloud.edgeworx.io)
+Deploy and manage edge applications including Darcy AI applications with the Edgeworx Cloud. Create an account for free at [https://cloud.edgeworx.io](https://cloud.edgeworx.io)
 
 ### Other helpful links
 - [Edgeworx website](https://edgeworx.io)
