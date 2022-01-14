@@ -14,11 +14,26 @@ sdfsdf
 
 ## What you need
 
-Edge compute board with Google Coral TPU
-- Raspberry Pi with Coral USB [Raspberry Pi 4](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) [Google Coral USB](https://coral.ai/products/accelerator/)
-- [Google Coral Dev Board](https://coral.ai/products/dev-board/)
-- [Google Coral Dev Board Mini](https://coral.ai/products/dev-board-mini/)
-- [ASUS Tinker T](https://www.asus.com/us/Networking-IoT-Servers/AIoT-Industrial-Solutions/Tinker-Board-Series/Tinker-Edge-T/)
+You will need some hardware to run your Darcy AI application. Darcy can generally run on any device or computer with a Google Coral AI accelerator. Darcy AI applications are packaged into Docker containers, so the operating system can be Linux, Mac OS X, or Windows provided that the Docker container runtime is installed.
+
+### System requirements
+
+- ARM or x86 CPU (two or more cores recommended)
+- Google Coral AI accelerator (more than one Coral increases performance for many applications)
+- 512MB of RAM (4GB or more recommended)
+- Camera (required for using Darcy with live video)
+- Internet connectivity (wired Ethernet or WiFi)
+- 200MB available disk space (1GB or more recommended and your application size will vary)
+- Docker container runtime
+
+### Darcy ready developer kits and edge boards
+
+- Raspberry Pi with Coral USB
+-- Raspberry Pi 4 single board computer [https://www.raspberrypi.com/products/raspberry-pi-4-model-b/](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
+-- Google Coral AI accelerator USB module [https://coral.ai/products/accelerator/](https://coral.ai/products/accelerator/)
+- Google Coral Dev Board [https://coral.ai/products/dev-board/](https://coral.ai/products/dev-board/)
+- Google Coral Dev Board Mini [https://coral.ai/products/dev-board-mini/](https://coral.ai/products/dev-board-mini/)
+- ASUS Tinker T [https://www.asus.com/us/Networking-IoT-Servers/AIoT-Industrial-Solutions/Tinker-Board-Series/Tinker-Edge-T/](https://www.asus.com/us/Networking-IoT-Servers/AIoT-Industrial-Solutions/Tinker-Board-Series/Tinker-Edge-T/)
 
 ## Getting started
 
