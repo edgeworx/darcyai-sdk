@@ -9,3 +9,4 @@ __pycache__
 venv/*
 pyvenv.cfg
 .pytest_cache
+.DS_Store
