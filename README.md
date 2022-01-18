@@ -4,9 +4,11 @@ This is the official software development kit (SDK) for building on the Darcy AI
 
 ## Introducing the Darcy AI platform
 
-What this is
-Why it exists
-What you get
+Darcy is an artificial intelligence (AI) that is focused on real-time interactions with the world around her. She has a variety of senses, such as vision and hearing, that allow her to perceive her environment. You can give Darcy additional senses, such as LiDAR or thermal vision, to expand her capabilities. Darcy is present in every device where a Darcy AI application is running. She runs entirely in each device. No data needs to leave the device and no computation is done in the cloud.
+
+Darcy was designed to bring AI technology into the real world while keeping privacy and security as top priorities. Building real-time AI applications is very challenging. The Darcy AI SDK is a developer platform for computer vision and other applications which handles all of the most difficult and repetitive problems for you so you can focus on building amazing solutions.
+
+With the Darcy AI SDK, you get everything you need to build real-time AI applications. If you can write web applications with Node.js or you have moderate Python experience, then you can develop a fully functioning AI app with Darcy. The SDK comes with documentation, build instructions, example applications, and more.
 
 ## How to use this SDK
 
