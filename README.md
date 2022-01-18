@@ -52,7 +52,7 @@ Learn how to deploy your Darcy AI application to your edge devices using the Edg
 
 ## Documentation
 
-sdfds
+Open the Darcy AI technical documentation to search and browse the API with code examples. This is a local documentation site that will run directly in your browser. The documentation is specific to each version of the Darcy AI SDK so it's the best place to reference when building. Start with the [Darcy AI Documentation Home Page](./docs/api/index.html)
 
 ## Resources
 
