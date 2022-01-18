@@ -39,7 +39,8 @@ You will need some hardware to run your Darcy AI application. Darcy can generall
 
 ## Getting started
 
-Understanding Darcy terminology
+If you haven't already become familiar with the Darcy AI platform terminology, check out this [Terminology Guide](./docs/TERMINOLOGY.md) to get up to speed quickly.
+
 Try the Darcy AI Explorer demo application
 
 ## Building
