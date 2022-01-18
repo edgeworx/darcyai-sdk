@@ -1,0 +1,54 @@
+kind: Application
+apiVersion: iofog.org/v3
+metadata:
+  name: edge-postgres2
+spec:
+  microservices:
+    - name: postgres-db
+      agent:
+        name: rpi-k7
+      images:
+        arm: postgres:12.2
+        x86: postgres:12.2
+      container:
+        rootHostAccess: true
+        ports:
+          - external: 5432
+            internal: 5432
+            protocol: tcp
+        volumes:
+          - hostDestination: "/db-data"
+            containerDestination: "/var/lib/postgresql/data"
+            accessMode: "rw"
+        env:
+          - key: POSTGRES_DB
+            value: "postgres"
+          - key: POSTGRES_USER
+            value: "admin"
+          - key: POSTGRES_PASSWORD
+            value: "changeme"
+          - key: PGDATA
+            value: "/var/lib/postgresql/data"
+    - name: pg-admin
+      agent:
+        name: rpi-k7
+      images:
+        arm: dpage/pgadmin4:4.18
+        x86: dpage/pgadmin4:4.18
+      container:
+        rootHostAccess: true
+        ports:
+          - external: 8472
+            internal: 80
+            protocol: tcp
+        volumes:
+          - hostDestination: "/admin-data"
+            containerDestination: "/var/lib/pgadmin"
+            accessMode: "rw"
+        env:
+          - key: PGADMIN_DEFAULT_EMAIL
+            value: "someone@demo.com"
+          - key: PGADMIN_DEFAULT_PASSWORD
+            value: "changeme"
+          - key: PGADMIN_LISTEN_PORT
+            value: 80
