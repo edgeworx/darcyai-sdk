@@ -48,7 +48,7 @@ Learn how to package your Darcy AI application into a container that includes al
 
 ## Deploying
 
-sdfsdf
+Learn how to deploy your Darcy AI application to your edge devices using the Edgeworx Cloud in the [Deployment Guide](./docs/DEPLOY.md)
 
 ## Documentation
 
