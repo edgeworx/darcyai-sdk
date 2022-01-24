@@ -173,4 +173,4 @@ pipeline.run_perceptor(people_ai, my_data)
 
 ## Bring it all together with a full application
 
-The best way to learn all of these concepts is to see them in action. Start with building a sample application that illustrates all of these topics in actual code. Then build your own! You can find a sample application guide here [Build Guide](./BUILD.md)
+The best way to learn all of these concepts is to see them in action. Start with building a sample application that illustrates all of these topics in actual code. Then build your own! You can find a sample application guide here [Build Guide](./BUILD.md).
