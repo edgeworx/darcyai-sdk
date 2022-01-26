@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>InputMultiStream - Darcy AI Engine</title>
+  <title>InputMultiStream - Darcy AI</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -37,7 +37,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Darcy AI Engine</a>
+        <a href="../.." class="icon icon-home"> Darcy AI</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -116,6 +116,17 @@
                     <li class="toctree-l1"><a class="reference internal" href="../../output-streams/jsonoutputstream/">JSONOutputStream</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">Coral Perceptors</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../coral-perceptors/imageclassificationperceptor/">ImageClassificationPerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../coral-perceptors/objectdetectionperceptor/">ObjectDetectionPerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../coral-perceptors/peopleperceptor/">PeoplePerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../coral-perceptors/peoplepom/">PeoplePOM</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -125,7 +136,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Darcy AI Engine</a>
+        <a href="../..">Darcy AI</a>
       </nav>
 
       
@@ -144,7 +155,7 @@
     <li>InputMultiStream</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/Edgeworx/darcyai-engine/edit/master/docs/input-streams/inputmultistream.md"
+        <a href="https://github.com/Edgeworx/darcyai/edit/master/docs/input-streams/inputmultistream.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -156,14 +167,14 @@
           <div role="main">
             <div class="section">
               
-                <p><a id="darcyai_engine.input.input_multi_stream"></a></p>
-<h1 id="darcyai_engineinputinput_multi_stream">darcyai_engine.input.input_multi_stream</h1>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/input/input_multi_stream.py#L1">[view_source]</a></p>
-<p><a id="darcyai_engine.input.input_multi_stream.InputMultiStream"></a></p>
+                <p><a id="darcyai.input.input_multi_stream"></a></p>
+<h1 id="darcyaiinputinput_multi_stream">darcyai.input.input_multi_stream</h1>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/input/input_multi_stream.py#L1">[view_source]</a></p>
+<p><a id="darcyai.input.input_multi_stream.InputMultiStream"></a></p>
 <h2 id="inputmultistream-objects">InputMultiStream Objects</h2>
 <pre><code class="language-python">class InputMultiStream()
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/input/input_multi_stream.py#L9">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/input/input_multi_stream.py#L9">[view_source]</a></p>
 <p>A class that represents a collection of input streams.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -173,8 +184,8 @@
     when data is received from a stream</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.input_multi_stream import InputMultiStream
-&gt;&gt;&gt; from darcyai_engine.stream_data import StreamData
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.input_multi_stream import InputMultiStream
+&gt;&gt;&gt; from darcyai.stream_data import StreamData
 
 &gt;&gt;&gt; def aggregator():
 ...     return StreamData(&quot;data&quot;, 1234567890)
@@ -184,19 +195,19 @@
 
 &gt;&gt;&gt; input_stream = InputMultiStream(aggregator, callback)
 </code></pre>
-<p><a id="darcyai_engine.input.input_multi_stream.InputMultiStream.remove_stream"></a></p>
+<p><a id="darcyai.input.input_multi_stream.InputMultiStream.remove_stream"></a></p>
 <h4 id="remove_stream">remove_stream</h4>
 <pre><code class="language-python">def remove_stream(name: str) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/input/input_multi_stream.py#L49">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/input/input_multi_stream.py#L49">[view_source]</a></p>
 <p>Removes a stream from the collection.</p>
 <p><strong>Arguments</strong></p>
 <ul>
 <li><strong>name</strong> (<code>str</code>): the name of the stream to remove</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.input.input_multi_stream import InputMultiStream
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.input.input_multi_stream import InputMultiStream
 
 &gt;&gt;&gt; usb_camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 
@@ -205,11 +216,11 @@
 
 &gt;&gt;&gt; input_stream.remove_stream(&quot;usb_camera&quot;)
 </code></pre>
-<p><a id="darcyai_engine.input.input_multi_stream.InputMultiStream.get_stream"></a></p>
+<p><a id="darcyai.input.input_multi_stream.InputMultiStream.get_stream"></a></p>
 <h4 id="get_stream">get_stream</h4>
 <pre><code class="language-python">def get_stream(name: str) -&gt; InputStream
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/input/input_multi_stream.py#L78">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/input/input_multi_stream.py#L78">[view_source]</a></p>
 <p>Gets a stream from the collection.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -218,8 +229,8 @@
 <p><strong>Returns</strong></p>
 <p><code>InputStream</code>: the stream with the given name</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.input.input_multi_stream import InputMultiStream
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.input.input_multi_stream import InputMultiStream
 
 &gt;&gt;&gt; usb_camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 
@@ -228,11 +239,11 @@
 
 &gt;&gt;&gt; input_stream.get_stream(&quot;usb_camera&quot;)
 </code></pre>
-<p><a id="darcyai_engine.input.input_multi_stream.InputMultiStream.add_stream"></a></p>
+<p><a id="darcyai.input.input_multi_stream.InputMultiStream.add_stream"></a></p>
 <h4 id="add_stream">add_stream</h4>
 <pre><code class="language-python">def add_stream(name: str, stream: InputStream) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/input/input_multi_stream.py#L106">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/input/input_multi_stream.py#L106">[view_source]</a></p>
 <p>Adds a stream to the collection.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -240,25 +251,25 @@
 <li><strong>stream</strong> (<code>InputStream</code>): the stream to add</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.input.input_multi_stream import InputMultiStream
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.input.input_multi_stream import InputMultiStream
 
 &gt;&gt;&gt; usb_camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 
 &gt;&gt;&gt; input_stream = InputMultiStream(aggregator, callback)
 &gt;&gt;&gt; input_stream.add_stream(&quot;usb_camera&quot;, usb_camera)
 </code></pre>
-<p><a id="darcyai_engine.input.input_multi_stream.InputMultiStream.stream"></a></p>
+<p><a id="darcyai.input.input_multi_stream.InputMultiStream.stream"></a></p>
 <h4 id="stream">stream</h4>
 <pre><code class="language-python">def stream() -&gt; Iterable[StreamData]
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/input/input_multi_stream.py#L138">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/input/input_multi_stream.py#L138">[view_source]</a></p>
 <p>Starts streaming data from all streams in the collection.</p>
 <p><strong>Returns</strong></p>
 <p><code>Iterable[StreamData]</code>: an iterable of data from all streams</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.input.input_multi_stream import InputMultiStream
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.input.input_multi_stream import InputMultiStream
 
 &gt;&gt;&gt; usb_camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 
@@ -267,15 +278,15 @@
 
 &gt;&gt;&gt; input_stream.stream()
 </code></pre>
-<p><a id="darcyai_engine.input.input_multi_stream.InputMultiStream.stop"></a></p>
+<p><a id="darcyai.input.input_multi_stream.InputMultiStream.stop"></a></p>
 <h4 id="stop">stop</h4>
 <pre><code class="language-python">def stop() -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/input/input_multi_stream.py#L173">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/input/input_multi_stream.py#L173">[view_source]</a></p>
 <p>Stops streaming data from all streams in the collection.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.input.input_multi_stream import InputMultiStream
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.input.input_multi_stream import InputMultiStream
 
 &gt;&gt;&gt; usb_camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 
@@ -320,7 +331,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
-          <a href="https://github.com/Edgeworx/darcyai-engine/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/Edgeworx/darcyai/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
         </span>
     
     

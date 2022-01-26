@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>JSONOutputStream - Darcy AI Engine</title>
+  <title>JSONOutputStream - Darcy AI</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -37,7 +37,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Darcy AI Engine</a>
+        <a href="../.." class="icon icon-home"> Darcy AI</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -110,6 +110,17 @@
     </ul>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">Coral Perceptors</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../coral-perceptors/imageclassificationperceptor/">ImageClassificationPerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../coral-perceptors/objectdetectionperceptor/">ObjectDetectionPerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../coral-perceptors/peopleperceptor/">PeoplePerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../coral-perceptors/peoplepom/">PeoplePOM</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -119,7 +130,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Darcy AI Engine</a>
+        <a href="../..">Darcy AI</a>
       </nav>
 
       
@@ -138,7 +149,7 @@
     <li>JSONOutputStream</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/Edgeworx/darcyai-engine/edit/master/docs/output-streams/jsonoutputstream.md"
+        <a href="https://github.com/Edgeworx/darcyai/edit/master/docs/output-streams/jsonoutputstream.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -150,14 +161,14 @@
           <div role="main">
             <div class="section">
               
-                <p><a id="darcyai_engine.output.json_output_stream"></a></p>
-<h1 id="darcyai_engineoutputjson_output_stream">darcyai_engine.output.json_output_stream</h1>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/output/json_output_stream.py#L1">[view_source]</a></p>
-<p><a id="darcyai_engine.output.json_output_stream.JSONOutputStream"></a></p>
+                <p><a id="darcyai.output.json_output_stream"></a></p>
+<h1 id="darcyaioutputjson_output_stream">darcyai.output.json_output_stream</h1>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/output/json_output_stream.py#L1">[view_source]</a></p>
+<p><a id="darcyai.output.json_output_stream.JSONOutputStream"></a></p>
 <h2 id="jsonoutputstream-objects">JSONOutputStream Objects</h2>
 <pre><code class="language-python">class JSONOutputStream(OutputStream)
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/output/json_output_stream.py#L8">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/output/json_output_stream.py#L8">[view_source]</a></p>
 <p>OutputStream implementation that writes to a JSON file.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -168,34 +179,34 @@
     to disk. Defaults to <code>0</code>.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.output.json_output_stream import JSONOutputStream
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.output.json_output_stream import JSONOutputStream
 &gt;&gt;&gt; json_output_stream = JSONOutputStream(file_path=&quot;output.csv&quot;,
                                           buffer_size=0)
 </code></pre>
-<p><a id="darcyai_engine.output.json_output_stream.JSONOutputStream.write"></a></p>
+<p><a id="darcyai.output.json_output_stream.JSONOutputStream.write"></a></p>
 <h4 id="write">write</h4>
 <pre><code class="language-python">def write(data: dict) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/output/json_output_stream.py#L43">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/output/json_output_stream.py#L43">[view_source]</a></p>
 <p>Writes the given data to the JSON file.</p>
 <p><strong>Arguments</strong></p>
 <ul>
 <li><strong>data</strong> (<code>dict</code>): The data to write to the JSON file.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.output.json_output_stream import JSONOutputStream
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.output.json_output_stream import JSONOutputStream
 &gt;&gt;&gt; json_output_stream = JSONOutputStream(file_path=&quot;output.csv&quot;,
                                           buffer_size=0)
 &gt;&gt;&gt; json_output_stream.write({&quot;key&quot;: &quot;value&quot;})
 </code></pre>
-<p><a id="darcyai_engine.output.json_output_stream.JSONOutputStream.close"></a></p>
+<p><a id="darcyai.output.json_output_stream.JSONOutputStream.close"></a></p>
 <h4 id="close">close</h4>
 <pre><code class="language-python">def close() -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/output/json_output_stream.py#L65">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/output/json_output_stream.py#L65">[view_source]</a></p>
 <p>Closes the JSON file.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.output.json_output_stream import JSONOutputStream
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.output.json_output_stream import JSONOutputStream
 &gt;&gt;&gt; json_output_stream = JSONOutputStream(file_path=&quot;output.csv&quot;,
                                           buffer_size=0)
 &gt;&gt;&gt; json_output_stream.close()
@@ -206,6 +217,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../coral-perceptors/imageclassificationperceptor/" class="btn btn-neutral float-right" title="ImageClassificationPerceptor">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../csvoutputstream/" class="btn btn-neutral" title="CSVOutputStream"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -234,12 +247,14 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
-          <a href="https://github.com/Edgeworx/darcyai-engine/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/Edgeworx/darcyai/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
         </span>
     
     
       <span><a href="../csvoutputstream/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../../coral-perceptors/imageclassificationperceptor/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

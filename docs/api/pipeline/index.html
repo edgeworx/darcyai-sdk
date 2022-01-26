@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Pipeline - Darcy AI Engine</title>
+  <title>Pipeline - Darcy AI</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -37,7 +37,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Darcy AI Engine</a>
+        <a href=".." class="icon icon-home"> Darcy AI</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -156,6 +156,17 @@
                     <li class="toctree-l1"><a class="reference internal" href="../output-streams/jsonoutputstream/">JSONOutputStream</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">Coral Perceptors</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../coral-perceptors/imageclassificationperceptor/">ImageClassificationPerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../coral-perceptors/objectdetectionperceptor/">ObjectDetectionPerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../coral-perceptors/peopleperceptor/">PeoplePerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../coral-perceptors/peoplepom/">PeoplePOM</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -165,7 +176,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Darcy AI Engine</a>
+        <a href="..">Darcy AI</a>
       </nav>
 
       
@@ -180,7 +191,7 @@
     <li>Pipeline</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/Edgeworx/darcyai-engine/edit/master/docs/pipeline.md"
+        <a href="https://github.com/Edgeworx/darcyai/edit/master/docs/pipeline.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -192,14 +203,14 @@
           <div role="main">
             <div class="section">
               
-                <p><a id="darcyai_engine.pipeline"></a></p>
-<h1 id="darcyai_enginepipeline">darcyai_engine.pipeline</h1>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L1">[view_source]</a></p>
-<p><a id="darcyai_engine.pipeline.Pipeline"></a></p>
+                <p><a id="darcyai.pipeline"></a></p>
+<h1 id="darcyaipipeline">darcyai.pipeline</h1>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L1">[view_source]</a></p>
+<p><a id="darcyai.pipeline.Pipeline"></a></p>
 <h2 id="pipeline-objects">Pipeline Objects</h2>
 <pre><code class="language-python">class Pipeline()
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L29">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L29">[view_source]</a></p>
 <p>The Pipeline class is the main class of the darcyai package.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -232,8 +243,8 @@
 <li><strong>rest_api_host</strong> (<code>str</code>): The host of the REST API. Defaults to <code>localhost</code>.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera,
@@ -252,23 +263,23 @@
 ...                     rest_api_port=5000,
 ...                     rest_api_host=&quot;localhost&quot;)
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.num_of_edge_tpus"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.num_of_edge_tpus"></a></p>
 <h4 id="num_of_edge_tpus">num_of_edge_tpus</h4>
 <pre><code class="language-python">def num_of_edge_tpus() -&gt; int
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L209">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L209">[view_source]</a></p>
 <p>Gets the number of Edge TPUs in the pipeline.</p>
 <p><strong>Returns</strong></p>
 <p><code>int</code>: The number of Edge TPUs in the pipeline.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; pipeline.num_of_edge_tpus()
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.add_perceptor"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.add_perceptor"></a></p>
 <h4 id="add_perceptor">add_perceptor</h4>
 <pre><code class="language-python">def add_perceptor(name: str, perceptor: Perceptor, input_callback: Callable[[StreamData,
                                                 PerceptionObjectModel,
@@ -278,7 +289,7 @@
                                                  ConfigRegistry],
                                                 Any] = None, parent: str = None, multi: bool = False, accelerator_idx: Union[int, None] = None, default_config: Dict[str, Any] = None) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L228">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L228">[view_source]</a></p>
 <p>Adds a new Perceptor to the pipeline.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -299,8 +310,8 @@
     Defaults to <code>None</code>.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
@@ -313,7 +324,7 @@
 ...                        accelerator_idx=0,
 ...                        default_config={&quot;key&quot;: &quot;value&quot;})
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.add_perceptor_before"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.add_perceptor_before"></a></p>
 <h4 id="add_perceptor_before">add_perceptor_before</h4>
 <pre><code class="language-python">def add_perceptor_before(name_to_insert_before: str, name: str, perceptor: Perceptor, input_callback: Callable[[StreamData,
                                                        PerceptionObjectModel,
@@ -323,7 +334,7 @@
                                                         ConfigRegistry],
                                                        Any] = None, multi: bool = False, accelerator_idx: Union[int, None] = None, default_config: dict = None) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L309">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L309">[view_source]</a></p>
 <p>Adds a new Perceptor to the pipeline.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -345,8 +356,8 @@
     Defaults to <code>None</code>.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
@@ -359,7 +370,7 @@
 ...                               accelerator_idx=0,
 ...                               default_config={&quot;key&quot;: &quot;value&quot;})
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.add_perceptor_after"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.add_perceptor_after"></a></p>
 <h4 id="add_perceptor_after">add_perceptor_after</h4>
 <pre><code class="language-python">def add_perceptor_after(name_to_insert_after: str, name: str, perceptor: Perceptor, input_callback: Callable[[StreamData,
                                                       PerceptionObjectModel,
@@ -369,7 +380,7 @@
                                                        ConfigRegistry],
                                                       Any] = None, multi: bool = False, accelerator_idx: Union[int, None] = None, default_config: dict = None) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L406">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L406">[view_source]</a></p>
 <p>Adds a new Perceptor to the pipeline.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -391,8 +402,8 @@
     Defaults to <code>None</code>.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
@@ -405,7 +416,7 @@
 ...                               accelerator_idx=0,
 ...                               default_config={&quot;key&quot;: &quot;value&quot;})
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.add_parallel_perceptor"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.add_parallel_perceptor"></a></p>
 <h4 id="add_parallel_perceptor">add_parallel_perceptor</h4>
 <pre><code class="language-python">def add_parallel_perceptor(name_to_insert_in_parallel_with: str, name: str, perceptor: Perceptor, input_callback: Callable[[StreamData,
                                                          PerceptionObjectModel,
@@ -415,7 +426,7 @@
                                                           ConfigRegistry],
                                                          Any] = None, multi: bool = False, accelerator_idx: Union[int, None] = None, default_config: dict = None) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L469">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L469">[view_source]</a></p>
 <p>Adds a new Perceptor to the pipeline.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -437,8 +448,8 @@
     Defaults to <code>None</code>.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
@@ -451,25 +462,25 @@
 ...                                 accelerator_idx=0,
 ...                                 default_config={&quot;key&quot;: &quot;value&quot;})
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.update_input_stream"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.update_input_stream"></a></p>
 <h4 id="update_input_stream">update_input_stream</h4>
 <pre><code class="language-python">def update_input_stream(input_stream: InputStream) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L561">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L561">[view_source]</a></p>
 <p>Updates the input stream of the pipeline.</p>
 <p><strong>Arguments</strong></p>
 <ul>
 <li><strong>input_stream</strong> (<code>InputStream</code>): The input stream to be added.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; pipeline.update_input_stream(camera)
 
-&lt;a id=&quot;darcyai_engine.pipeline.Pipeline.add_output_stream&quot;&gt;&lt;/a&gt;
+&lt;a id=&quot;darcyai.pipeline.Pipeline.add_output_stream&quot;&gt;&lt;/a&gt;
 
 #### add\_output\_stream
 
@@ -478,7 +489,7 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
                                               StreamData],
                                              Any], output_stream: OutputStream, default_config: dict = None) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L588">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L588">[view_source]</a></p>
 <p>Adds an OutputStream to the pipeline.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -491,8 +502,8 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
     Defaults to <code>None</code>.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
@@ -501,19 +512,19 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
 ...                            output_stream=MyOutputStream(),
 ...                            default_config={&quot;key&quot;: &quot;value&quot;})
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.remove_output_stream"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.remove_output_stream"></a></p>
 <h4 id="remove_output_stream">remove_output_stream</h4>
 <pre><code class="language-python">def remove_output_stream(name: str) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L647">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L647">[view_source]</a></p>
 <p>Removes an OutputStream from the pipeline.</p>
 <p><strong>Arguments</strong></p>
 <ul>
 <li><strong>name</strong> (<code>str</code>): The name of the OutputStream to be removed.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)\
@@ -523,87 +534,87 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
 ...                            default_config={&quot;key&quot;: &quot;value&quot;})
 &gt;&gt;&gt; pipeline.remove_output_stream(name=&quot;output_stream&quot;)
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.stop"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.stop"></a></p>
 <h4 id="stop">stop</h4>
 <pre><code class="language-python">def stop() -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L679">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L679">[view_source]</a></p>
 <p>Stops the pipeline.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; pipeline.stop()
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.run"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.run"></a></p>
 <h4 id="run">run</h4>
 <pre><code class="language-python">def run() -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L700">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L700">[view_source]</a></p>
 <p>Runs the pipeline.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; pipeline.run()
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.get_pom"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.get_pom"></a></p>
 <h4 id="get_pom">get_pom</h4>
 <pre><code class="language-python">def get_pom() -&gt; PerceptionObjectModel
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L809">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L809">[view_source]</a></p>
 <p>Gets the Perception Object Model.</p>
 <p><strong>Returns</strong></p>
 <p><code>PerceptionObjectModel</code>: The Perception Object Model.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; pom = pipeline.get_pom()
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.get_current_pulse_number"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.get_current_pulse_number"></a></p>
 <h4 id="get_current_pulse_number">get_current_pulse_number</h4>
 <pre><code class="language-python">def get_current_pulse_number() -&gt; int
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L828">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L828">[view_source]</a></p>
 <p>Gets the current pulse number.</p>
 <p><strong>Returns</strong></p>
 <p><code>int</code>: The current pulse number.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; pulse_number = pipeline.get_current_pulse_number()
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.get_latest_input"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.get_latest_input"></a></p>
 <h4 id="get_latest_input">get_latest_input</h4>
 <pre><code class="language-python">def get_latest_input() -&gt; StreamData
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L847">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L847">[view_source]</a></p>
 <p>Gets the latest input data.</p>
 <p><strong>Returns</strong></p>
 <p><code>StreamData</code>: The latest input data.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; latest_input = pipeline.get_latest_input()
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.get_historical_input"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.get_historical_input"></a></p>
 <h4 id="get_historical_input">get_historical_input</h4>
 <pre><code class="language-python">def get_historical_input(pulse_number: int) -&gt; StreamData
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L866">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L866">[view_source]</a></p>
 <p>Gets the input data from the history.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -612,34 +623,34 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
 <p><strong>Returns</strong></p>
 <p><code>StreamData</code>: The input data from the history.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; historical_input = pipeline.get_historical_input(pulse_number=1)
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.get_input_history"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.get_input_history"></a></p>
 <h4 id="get_input_history">get_input_history</h4>
 <pre><code class="language-python">def get_input_history() -&gt; Dict[int, StreamData]
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L891">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L891">[view_source]</a></p>
 <p>Gets the input data history.</p>
 <p><strong>Returns</strong></p>
 <p><code>Dict[int, StreamData]</code> - The input data history.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; input_history = pipeline.get_input_history()
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.get_historical_pom"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.get_historical_pom"></a></p>
 <h4 id="get_historical_pom">get_historical_pom</h4>
 <pre><code class="language-python">def get_historical_pom(pulse_number: int) -&gt; PerceptionObjectModel
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L910">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L910">[view_source]</a></p>
 <p>Gets the POM from the history.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -648,34 +659,34 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
 <p><strong>Returns</strong></p>
 <p><code>PerceptionObjectModel</code>: The POM from the history.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; historical_pom = pipeline.get_historical_pom(pulse_number=1)
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.get_pom_history"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.get_pom_history"></a></p>
 <h4 id="get_pom_history">get_pom_history</h4>
 <pre><code class="language-python">def get_pom_history() -&gt; Dict[int, PerceptionObjectModel]
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L935">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L935">[view_source]</a></p>
 <p>Gets the POM history.</p>
 <p><strong>Returns</strong></p>
 <p><code>Dict[int, PerceptionObjectModel]</code> - The POM history.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; pom_history = pipeline.get_pom_history()
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.run_perceptor"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.run_perceptor"></a></p>
 <h4 id="run_perceptor">run_perceptor</h4>
 <pre><code class="language-python">def run_perceptor(perceptor: Perceptor, input_data: Any, multi: bool = False) -&gt; Any
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L954">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L954">[view_source]</a></p>
 <p>Runs the Perceptor.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -687,50 +698,50 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
 <p><strong>Returns</strong></p>
 <p><code>Any</code>: The result of running the Perceptor.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; result = pipeline.run_perceptor(perceptor=Perceptor(), input_data=None, multi=True)
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.get_graph"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.get_graph"></a></p>
 <h4 id="get_graph">get_graph</h4>
 <pre><code class="language-python">def get_graph() -&gt; Any
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L998">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L998">[view_source]</a></p>
 <p>Gets the graph of the perceptors.</p>
 <p><strong>Returns</strong></p>
 <p><code>Any</code>: The graph of the perceptors.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; graph = pipeline.get_graph()
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.get_all_performance_metrics"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.get_all_performance_metrics"></a></p>
 <h4 id="get_all_performance_metrics">get_all_performance_metrics</h4>
 <pre><code class="language-python">def get_all_performance_metrics() -&gt; Dict[str, Any]
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L1021">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L1021">[view_source]</a></p>
 <p>Gets the performance metrics of the pipeline.</p>
 <p><strong>Returns</strong></p>
 <p><code>Dict[str, Any]</code> - The performance metrics of the pipeline.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; metrics = pipeline.get_all_performance_metrics()
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.get_pulse_performance_metrics"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.get_pulse_performance_metrics"></a></p>
 <h4 id="get_pulse_performance_metrics">get_pulse_performance_metrics</h4>
 <pre><code class="language-python">def get_pulse_performance_metrics(pulse_number: Union[int, None] = None) -&gt; Dict[str, Any]
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L1051">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L1051">[view_source]</a></p>
 <p>Gets the performance metrics of the pipeline for specific pulse.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -740,18 +751,18 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
 <p><strong>Returns</strong></p>
 <p><code>Dict[str, Any]</code> - The performance metrics of the pipeline for specific pulse.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; metrics = pipeline.get_pulse_performance_metrics(pulse_number=1)
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.get_perceptor_performance_metrics"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.get_perceptor_performance_metrics"></a></p>
 <h4 id="get_perceptor_performance_metrics">get_perceptor_performance_metrics</h4>
 <pre><code class="language-python">def get_perceptor_performance_metrics(name: str, pulse_number: Union[int, None] = None) -&gt; Dict[str, Any]
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L1081">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L1081">[view_source]</a></p>
 <p>Gets the performance metrics of the pipeline for specific perceptor.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -762,19 +773,19 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
 <p><strong>Returns</strong></p>
 <p><code>Dict[str, Any]</code> - The performance metrics of the pipeline for specific perceptor.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; metrics = pipeline.get_perceptor_performance_metrics(name=&quot;perceptor_name&quot;,
 ...                                                      pulse_number=1)
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.set_perceptor_config"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.set_perceptor_config"></a></p>
 <h4 id="set_perceptor_config">set_perceptor_config</h4>
 <pre><code class="language-python">def set_perceptor_config(perceptor_name: str, name: str, value: Any) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L1116">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L1116">[view_source]</a></p>
 <p>Sets the config of the pipeline.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -783,8 +794,8 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
 <li><strong>value</strong> (<code>Any</code>): The value of the config.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
@@ -792,11 +803,11 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
 ...                               name=&quot;config_name&quot;,
 ...                               value=1)
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.get_perceptor_config"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.get_perceptor_config"></a></p>
 <h4 id="get_perceptor_config">get_perceptor_config</h4>
 <pre><code class="language-python">def get_perceptor_config(perceptor_name: str) -&gt; Dict[str, Tuple[Any, Config]]
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L1149">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L1149">[view_source]</a></p>
 <p>Gets the config of the perceptor.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -805,18 +816,18 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
 <p><strong>Returns</strong></p>
 <p><code>Dict[str, Tuple[Any, Config]]</code> - The config of the perceptor.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
 &gt;&gt;&gt; config = pipeline.get_perceptor_config(perceptor_name=&quot;perceptor_name&quot;)
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.set_output_stream_config"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.set_output_stream_config"></a></p>
 <h4 id="set_output_stream_config">set_output_stream_config</h4>
 <pre><code class="language-python">def set_output_stream_config(name: str, config_name: str, value: Any) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L1183">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L1183">[view_source]</a></p>
 <p>Sets the config of the output stream.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -825,8 +836,8 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
 <li><strong>value</strong> (<code>Any</code>): The value of the config.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
@@ -834,11 +845,11 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
 ...                                   config_name=&quot;config_name&quot;,
 ...                                   value=1)
 </code></pre>
-<p><a id="darcyai_engine.pipeline.Pipeline.get_output_stream_config"></a></p>
+<p><a id="darcyai.pipeline.Pipeline.get_output_stream_config"></a></p>
 <h4 id="get_output_stream_config">get_output_stream_config</h4>
 <pre><code class="language-python">def get_output_stream_config(name: str) -&gt; Dict[str, Tuple[Any, Config]]
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/pipeline.py#L1216">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/pipeline.py#L1216">[view_source]</a></p>
 <p>Gets the config of the output stream.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -847,8 +858,8 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
 <p><strong>Returns</strong></p>
 <p><code>Dict[str, Tuple[Any, Config]]</code> - The config of the output stream.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.input.camera_stream import CameraStream
-&gt;&gt;&gt; from darcyai_engine.pipeline import Pipeline
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.input.camera_stream import CameraStream
+&gt;&gt;&gt; from darcyai.pipeline import Pipeline
 
 &gt;&gt;&gt; camera = CameraStream(video_device=&quot;/dev/video0&quot;)
 &gt;&gt;&gt; pipeline = Pipeline(input_stream=camera)
@@ -890,7 +901,7 @@ def add_output_stream(name: str, callback: Callable[[PerceptionObjectModel,
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
-          <a href="https://github.com/Edgeworx/darcyai-engine/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/Edgeworx/darcyai/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
         </span>
     
     

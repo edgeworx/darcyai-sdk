@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Perceptor - Darcy AI Engine</title>
+  <title>Perceptor - Darcy AI</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -37,7 +37,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Darcy AI Engine</a>
+        <a href=".." class="icon icon-home"> Darcy AI</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -120,6 +120,17 @@
                     <li class="toctree-l1"><a class="reference internal" href="../output-streams/jsonoutputstream/">JSONOutputStream</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">Coral Perceptors</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../coral-perceptors/imageclassificationperceptor/">ImageClassificationPerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../coral-perceptors/objectdetectionperceptor/">ObjectDetectionPerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../coral-perceptors/peopleperceptor/">PeoplePerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../coral-perceptors/peoplepom/">PeoplePOM</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -129,7 +140,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Darcy AI Engine</a>
+        <a href="..">Darcy AI</a>
       </nav>
 
       
@@ -144,7 +155,7 @@
     <li>Perceptor</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/Edgeworx/darcyai-engine/edit/master/docs/perceptor.md"
+        <a href="https://github.com/Edgeworx/darcyai/edit/master/docs/perceptor.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -156,21 +167,21 @@
           <div role="main">
             <div class="section">
               
-                <p><a id="darcyai_engine.perceptor.perceptor"></a></p>
-<h1 id="darcyai_engineperceptorperceptor">darcyai_engine.perceptor.perceptor</h1>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/perceptor/perceptor.py#L1">[view_source]</a></p>
-<p><a id="darcyai_engine.perceptor.perceptor.Perceptor"></a></p>
+                <p><a id="darcyai.perceptor.perceptor"></a></p>
+<h1 id="darcyaiperceptorperceptor">darcyai.perceptor.perceptor</h1>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/perceptor/perceptor.py#L1">[view_source]</a></p>
+<p><a id="darcyai.perceptor.perceptor.Perceptor"></a></p>
 <h2 id="perceptor-objects">Perceptor Objects</h2>
 <pre><code class="language-python">class Perceptor(Configurable,  EventEmitter)
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/perceptor/perceptor.py#L9">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/perceptor/perceptor.py#L9">[view_source]</a></p>
 <p>The Perceptor class is the base class for all perceptors.</p>
 <p><strong>Arguments</strong></p>
 <ul>
 <li><strong>model_path</strong> (<code>str</code>): The path to the model file.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.perceptor import Perceptor
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.perceptor import Perceptor
 &gt;&gt;&gt; class MyPerceptor(Perceptor):
 &gt;&gt;&gt;     def __init__(self):
 ...         Perceptor.__init__(self, &quot;path/to/model&quot;)
@@ -181,11 +192,11 @@
 &gt;&gt;&gt;     def load(self):
 ...         pass
 </code></pre>
-<p><a id="darcyai_engine.perceptor.perceptor.Perceptor.run"></a></p>
+<p><a id="darcyai.perceptor.perceptor.Perceptor.run"></a></p>
 <h4 id="run">run</h4>
 <pre><code class="language-python">def run(input_data: Any, config: ConfigRegistry = None) -&gt; Any
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/perceptor/perceptor.py#L42">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/perceptor/perceptor.py#L42">[view_source]</a></p>
 <p>Runs the perceptor on the input data.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -194,51 +205,51 @@
 </ul>
 <p><strong>Returns</strong></p>
 <p><code>Any</code>: The output of the perceptor.</p>
-<p><a id="darcyai_engine.perceptor.perceptor.Perceptor.load"></a></p>
+<p><a id="darcyai.perceptor.perceptor.Perceptor.load"></a></p>
 <h4 id="load">load</h4>
 <pre><code class="language-python">def load(accelerator_idx: Union[int, None] = None) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/perceptor/perceptor.py#L55">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/perceptor/perceptor.py#L55">[view_source]</a></p>
 <p>Loads the perceptor.</p>
 <p><strong>Arguments</strong></p>
 <ul>
 <li><strong>accelerator_idx</strong> (<code>int, None</code>): The index of the accelerator to load
     the perceptor on. Defaults to <code>None</code>.</li>
 </ul>
-<p><a id="darcyai_engine.perceptor.perceptor.Perceptor.is_loaded"></a></p>
+<p><a id="darcyai.perceptor.perceptor.Perceptor.is_loaded"></a></p>
 <h4 id="is_loaded">is_loaded</h4>
 <pre><code class="language-python">def is_loaded() -&gt; bool
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/perceptor/perceptor.py#L65">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/perceptor/perceptor.py#L65">[view_source]</a></p>
 <p>Checks if the perceptor is loaded.</p>
 <p><strong>Returns</strong></p>
 <p><code>bool</code>: True if the perceptor is loaded, False otherwise.</p>
-<p><a id="darcyai_engine.perceptor.perceptor.Perceptor.set_loaded"></a></p>
+<p><a id="darcyai.perceptor.perceptor.Perceptor.set_loaded"></a></p>
 <h4 id="set_loaded">set_loaded</h4>
 <pre><code class="language-python">def set_loaded(loaded: bool) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/perceptor/perceptor.py#L74">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/perceptor/perceptor.py#L74">[view_source]</a></p>
 <p>Sets the perceptor loaded state.</p>
 <p><strong>Arguments</strong></p>
 <ul>
 <li><strong>loaded</strong> (<code>bool</code>): The loaded state.</li>
 </ul>
-<p><a id="darcyai_engine.perceptor.perceptor.Perceptor.set_config_value"></a></p>
+<p><a id="darcyai.perceptor.perceptor.Perceptor.set_config_value"></a></p>
 <h4 id="set_config_value">set_config_value</h4>
 <pre><code class="language-python">def set_config_value(key: str, value: Any)
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/perceptor/perceptor.py#L86">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/perceptor/perceptor.py#L86">[view_source]</a></p>
 <p>Sets a config value.</p>
 <p><strong>Arguments</strong></p>
 <ul>
 <li><strong>key</strong> (<code>str</code>): The key of the config.</li>
 <li><strong>value</strong> (<code>Any</code>): The value to set.</li>
 </ul>
-<p><a id="darcyai_engine.perceptor.perceptor.Perceptor.get_config_value"></a></p>
+<p><a id="darcyai.perceptor.perceptor.Perceptor.get_config_value"></a></p>
 <h4 id="get_config_value">get_config_value</h4>
 <pre><code class="language-python">def get_config_value(key: str) -&gt; Any
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/perceptor/perceptor.py#L110">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/perceptor/perceptor.py#L110">[view_source]</a></p>
 <p>Gets a config value.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -246,11 +257,11 @@
 </ul>
 <p><strong>Returns</strong></p>
 <p><code>Any</code>: The value of the config.</p>
-<p><a id="darcyai_engine.perceptor.perceptor.Perceptor.init_config_registry"></a></p>
+<p><a id="darcyai.perceptor.perceptor.Perceptor.init_config_registry"></a></p>
 <h4 id="init_config_registry">init_config_registry</h4>
 <pre><code class="language-python">def init_config_registry()
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/perceptor/perceptor.py#L127">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/perceptor/perceptor.py#L127">[view_source]</a></p>
 <p>Initializes the config registry.</p>
               
             </div>
@@ -288,7 +299,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
-          <a href="https://github.com/Edgeworx/darcyai-engine/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/Edgeworx/darcyai/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
         </span>
     
     

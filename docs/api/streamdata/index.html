@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>StreamData - Darcy AI Engine</title>
+  <title>StreamData - Darcy AI</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -37,7 +37,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Darcy AI Engine</a>
+        <a href=".." class="icon icon-home"> Darcy AI</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -108,6 +108,17 @@
                     <li class="toctree-l1"><a class="reference internal" href="../output-streams/jsonoutputstream/">JSONOutputStream</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">Coral Perceptors</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../coral-perceptors/imageclassificationperceptor/">ImageClassificationPerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../coral-perceptors/objectdetectionperceptor/">ObjectDetectionPerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../coral-perceptors/peopleperceptor/">PeoplePerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../coral-perceptors/peoplepom/">PeoplePOM</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -117,7 +128,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Darcy AI Engine</a>
+        <a href="..">Darcy AI</a>
       </nav>
 
       
@@ -132,7 +143,7 @@
     <li>StreamData</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/Edgeworx/darcyai-engine/edit/master/docs/streamdata.md"
+        <a href="https://github.com/Edgeworx/darcyai/edit/master/docs/streamdata.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -144,25 +155,25 @@
           <div role="main">
             <div class="section">
               
-                <p><a id="darcyai_engine.stream_data"></a></p>
-<h1 id="darcyai_enginestream_data">darcyai_engine.stream_data</h1>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/stream_data.py#L1">[view_source]</a></p>
-<p><a id="darcyai_engine.stream_data.StreamData"></a></p>
+                <p><a id="darcyai.stream_data"></a></p>
+<h1 id="darcyaistream_data">darcyai.stream_data</h1>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/stream_data.py#L1">[view_source]</a></p>
+<p><a id="darcyai.stream_data.StreamData"></a></p>
 <h2 id="streamdata-objects">StreamData Objects</h2>
 <pre><code class="language-python">class StreamData(Serializable)
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/stream_data.py#L6">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/stream_data.py#L6">[view_source]</a></p>
 <p>Class to hold data from a stream.</p>
 <p><strong>Arguments</strong></p>
 <ul>
 <li><strong>data</strong> (<code>Any</code>): The data to be stored.</li>
 <li><strong>timestamp</strong> (<code>int</code>): The timestamp of the data.</li>
 </ul>
-<p><a id="darcyai_engine.stream_data.StreamData.serialize"></a></p>
+<p><a id="darcyai.stream_data.StreamData.serialize"></a></p>
 <h4 id="serialize">serialize</h4>
 <pre><code class="language-python">def serialize() -&gt; dict
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/stream_data.py#L20">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/stream_data.py#L20">[view_source]</a></p>
 <p>Serializes the data.</p>
 <p><strong>Returns</strong></p>
 <p><code>dict</code>: The serialized data.</p>
@@ -202,7 +213,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
-          <a href="https://github.com/Edgeworx/darcyai-engine/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/Edgeworx/darcyai/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
         </span>
     
     

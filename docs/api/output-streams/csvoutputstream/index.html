@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>CSVOutputStream - Darcy AI Engine</title>
+  <title>CSVOutputStream - Darcy AI</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -37,7 +37,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Darcy AI Engine</a>
+        <a href="../.." class="icon icon-home"> Darcy AI</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -110,6 +110,17 @@
                     <li class="toctree-l1"><a class="reference internal" href="../jsonoutputstream/">JSONOutputStream</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">Coral Perceptors</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../coral-perceptors/imageclassificationperceptor/">ImageClassificationPerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../coral-perceptors/objectdetectionperceptor/">ObjectDetectionPerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../coral-perceptors/peopleperceptor/">PeoplePerceptor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../coral-perceptors/peoplepom/">PeoplePOM</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -119,7 +130,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Darcy AI Engine</a>
+        <a href="../..">Darcy AI</a>
       </nav>
 
       
@@ -138,7 +149,7 @@
     <li>CSVOutputStream</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/Edgeworx/darcyai-engine/edit/master/docs/output-streams/csvoutputstream.md"
+        <a href="https://github.com/Edgeworx/darcyai/edit/master/docs/output-streams/csvoutputstream.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -150,14 +161,14 @@
           <div role="main">
             <div class="section">
               
-                <p><a id="darcyai_engine.output.csv_output_stream"></a></p>
-<h1 id="darcyai_engineoutputcsv_output_stream">darcyai_engine.output.csv_output_stream</h1>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/output/csv_output_stream.py#L1">[view_source]</a></p>
-<p><a id="darcyai_engine.output.csv_output_stream.CSVOutputStream"></a></p>
+                <p><a id="darcyai.output.csv_output_stream"></a></p>
+<h1 id="darcyaioutputcsv_output_stream">darcyai.output.csv_output_stream</h1>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/output/csv_output_stream.py#L1">[view_source]</a></p>
+<p><a id="darcyai.output.csv_output_stream.CSVOutputStream"></a></p>
 <h2 id="csvoutputstream-objects">CSVOutputStream Objects</h2>
 <pre><code class="language-python">class CSVOutputStream(OutputStream)
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/output/csv_output_stream.py#L9">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/output/csv_output_stream.py#L9">[view_source]</a></p>
 <p>OutputStream implementation that writes to a CSV file.</p>
 <p><strong>Arguments</strong></p>
 <ul>
@@ -170,25 +181,25 @@
     Defaults to <code>0</code>.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.output.csv_output_stream import CSVOutputStream
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.output.csv_output_stream import CSVOutputStream
 &gt;&gt;&gt; csv_output_stream = CSVOutputStream(file_path=&quot;output.csv&quot;,
                                         delimiter=&quot;,&quot;,
                                         quotechar=&quot;|&quot;,
                                         buffer_size=1024*1024,
                                         flush_interval=0)
 </code></pre>
-<p><a id="darcyai_engine.output.csv_output_stream.CSVOutputStream.write"></a></p>
+<p><a id="darcyai.output.csv_output_stream.CSVOutputStream.write"></a></p>
 <h4 id="write">write</h4>
 <pre><code class="language-python">def write(data: list) -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/output/csv_output_stream.py#L63">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/output/csv_output_stream.py#L63">[view_source]</a></p>
 <p>Writes the given data to the CSV file.</p>
 <p><strong>Arguments</strong></p>
 <ul>
 <li><strong>data</strong> (<code>list</code>): The data to write to the CSV file.</li>
 </ul>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.output.csv_output_stream import CSVOutputStream
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.output.csv_output_stream import CSVOutputStream
 &gt;&gt;&gt; csv_output_stream = CSVOutputStream(file_path=&quot;output.csv&quot;,
                                         delimiter=&quot;,&quot;,
                                         quotechar=&quot;|&quot;,
@@ -196,14 +207,14 @@
                                         flush_interval=0)
 &gt;&gt;&gt; csv_output_stream.write([[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;], [&quot;d&quot;, &quot;e&quot;, &quot;f&quot;]])
 </code></pre>
-<p><a id="darcyai_engine.output.csv_output_stream.CSVOutputStream.close"></a></p>
+<p><a id="darcyai.output.csv_output_stream.CSVOutputStream.close"></a></p>
 <h4 id="close">close</h4>
 <pre><code class="language-python">def close() -&gt; None
 </code></pre>
-<p><a href="https://github.com/Edgeworx/darcyai-engine/blob/09abd920ca6e72e0d05618802f6e8f8826b2d7d4/src/darcyai_engine/output/csv_output_stream.py#L96">[view_source]</a></p>
+<p><a href="https://github.com/Edgeworx/darcyai/blob/16ff99f259c8e991d0d805b8f3c18ff560e6429c/src/darcyai/output/csv_output_stream.py#L96">[view_source]</a></p>
 <p>Closes the CSV file.</p>
 <p><strong>Examples</strong></p>
-<pre><code class="language-python">&gt;&gt;&gt; from darcyai_engine.output.csv_output_stream import CSVOutputStream
+<pre><code class="language-python">&gt;&gt;&gt; from darcyai.output.csv_output_stream import CSVOutputStream
 &gt;&gt;&gt; csv_output_stream = CSVOutputStream(file_path=&quot;output.csv&quot;,
                                         delimiter=&quot;,&quot;,
                                         quotechar=&quot;|&quot;,
@@ -247,7 +258,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
-          <a href="https://github.com/Edgeworx/darcyai-engine/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/Edgeworx/darcyai/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
         </span>
     
     
